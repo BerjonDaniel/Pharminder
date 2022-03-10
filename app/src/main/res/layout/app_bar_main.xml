@@ -57,6 +57,7 @@
         android:layout_gravity="bottom|right"
         android:layout_marginLeft="335dp"
         android:backgroundTint="#00FFFDFD"
+        android:onClick="openMaps"
         android:tint="#000000"
         app:srcCompat="@drawable/ic_baseline_location_on_24" />
 

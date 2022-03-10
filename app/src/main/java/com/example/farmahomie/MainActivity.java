@@ -1,9 +1,12 @@
 package com.example.farmahomie;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -56,9 +59,15 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-
         //Creating the popupmenu with the three buttons
 
+    }
+
+    public void openMaps (View viex){
+        //intent que lanzará la segunda actividad: Mapa
+        Intent intent = new Intent(this, MapsActivity.class);
+        ImageButton mapsButton = (ImageButton) findViewById(R.id.imageButton);
+        startActivity(intent);
     }
     public void showPopup(View view){
         PopupMenu popup=new PopupMenu(this, view);
