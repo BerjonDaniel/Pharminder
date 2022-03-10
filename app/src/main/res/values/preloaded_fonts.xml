@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/cedarville_cursive</item>
+        <item>@font/charmonman</item>
+        <item>@font/charmonman_bold</item>
+        <item>@font/herr_von_muellerhoff</item>
+        <item>@font/kaushan_script</item>
+        <item>@font/marck_script</item>
+    </array>
+</resources>
