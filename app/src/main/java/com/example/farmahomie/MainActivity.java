@@ -63,12 +63,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
     }
 
-    public void openMaps (View viex){
-        //intent que lanzará la segunda actividad: Mapa
-        Intent intent = new Intent(this, MapsActivity.class);
-        ImageButton mapsButton = (ImageButton) findViewById(R.id.imageButton);
-        startActivity(intent);
-    }
+
     public void showPopup(View view){
         PopupMenu popup=new PopupMenu(this, view);
         popup.setOnMenuItemClickListener(this);
@@ -100,6 +95,17 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         default:
             return false;
         }
+    }
+    public void openMaps(View view) {
+        // Do something in response to button
+        switchActivities();
+
+    }
+
+    private void switchActivities() {
+
+        startActivity(new Intent(MainActivity.this, MapsActivity.class));
+
     }
 
 
