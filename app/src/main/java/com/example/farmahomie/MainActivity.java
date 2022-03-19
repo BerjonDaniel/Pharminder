@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+
+
+
         //Creating the popupmenu with the three buttons
 
     }
@@ -71,13 +74,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         popup.show();
 
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
 
-        return true;
-    }
     @Override
     public boolean onMenuItemClick(MenuItem item) {
 
@@ -92,12 +89,15 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             case R.id.item3:
                 Toast.makeText(this, "Nombre del medicamento", Toast.LENGTH_SHORT);
                switchMaintoNewmed();
-
+            case R.id.action_settings:{
+                switchMaintoSettings();
+            }
                 return true;
         default:
             return false;
         }
     }
+        //menu para settings
 
     public void openMaps(View view) {
         // Do something in response to button
