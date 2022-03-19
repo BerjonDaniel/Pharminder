@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.farmahomie" >
+    package="com.example.farmahomie">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -12,8 +12,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Farmahomie" >
-
+        android:theme="@style/Theme.Farmahomie">
+        <activity
+            android:name=".NewMedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -46,7 +52,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Farmahomie.NoActionBar" >
+            android:theme="@style/Theme.Farmahomie.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

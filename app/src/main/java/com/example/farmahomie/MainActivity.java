@@ -91,23 +91,42 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 return true;
             case R.id.item3:
                 Toast.makeText(this, "Nombre del medicamento", Toast.LENGTH_SHORT);
+               switchMaintoNewmed();
+
                 return true;
         default:
             return false;
         }
     }
+
     public void openMaps(View view) {
         // Do something in response to button
-        switchActivities();
+        switchMaintoMaps();
 
     }
 
-    private void switchActivities() {
+    private void switchMaintoMaps() {
 
         startActivity(new Intent(MainActivity.this, MapsActivity.class));
 
     }
 
+    public void openSettings(View view) {
+        // Do something in response to button
+        switchMaintoSettings();
+
+    }
+
+    private void switchMaintoSettings() {
+
+        startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+
+    }
+    private void switchMaintoNewmed() {
+
+        startActivity(new Intent(MainActivity.this, NewMedActivity.class));
+
+    }
 
     @Override
     public boolean onSupportNavigateUp() {
