@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             return false;
         }
     }
-        //menu para settings
+        //menu para setting
 
     public void openMaps(View view) {
         // Do something in response to button
