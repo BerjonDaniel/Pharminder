@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 return true;
             case R.id.item3:
                 Toast.makeText(this, "Nombre del medicamento", Toast.LENGTH_SHORT);
-               switchMaintoNewmed();
+               switchMaintoedit();
 
                 return true;
         default:
@@ -123,9 +123,16 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         startActivity(new Intent(MainActivity.this, SettingsActivity.class));
 
     }
+
     private void switchMaintoNewmed() {
 
         startActivity(new Intent(MainActivity.this, NewMedActivity.class));
+
+    }
+    //o una o la otra tenemo que utilizar
+    private void switchMaintoedit() {
+
+        startActivity(new Intent(MainActivity.this, EditActivity.class));
 
     }
     @Override
