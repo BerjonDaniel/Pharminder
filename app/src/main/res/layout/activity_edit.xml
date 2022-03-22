@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,7 +16,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="title" />
+            android:text="@string/title" />
 
         <EditText
             android:id="@+id/title"
@@ -24,7 +28,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="body" />
+        android:text="@string/body" />
 
     <EditText
         android:id="@+id/body"
@@ -38,6 +42,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="saveNote"
-        android:text="confirm" />
+        android:text="@string/confirm" />
 
 </LinearLayout>

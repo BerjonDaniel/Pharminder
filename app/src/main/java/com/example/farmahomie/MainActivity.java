@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -28,7 +29,11 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    private static final int ACTIVITY_CREATE=0;
+    private NotesDbAdapter dbAdapter;
+    private ListView m_listview;
 
+    // para indicar en un Intent si se quiere crear una nueva nota o editar una existen
     @Override
    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +71,10 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
     }
 
-
+    public void createNote() {
+        Intent i = new Intent(this,com.example.farmahomie.EditActivity.class);
+        startActivityForResult(i, ACTIVITY_CREATE);
+    }
 
 
 
@@ -91,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 return true;
             case R.id.item3:
                 Toast.makeText(this, "Nombre del medicamento", Toast.LENGTH_SHORT);
-               switchMaintoedit();
+                switchMaintoNotepad();
 
                 return true;
         default:
@@ -130,9 +138,9 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
     }
     //o una o la otra tenemo que utilizar
-    private void switchMaintoedit() {
+    private void switchMaintoNotepad() {
 
-        startActivity(new Intent(MainActivity.this, EditActivity.class));
+        startActivity(new Intent(MainActivity.this, NotepadActivity.class));
 
     }
     @Override

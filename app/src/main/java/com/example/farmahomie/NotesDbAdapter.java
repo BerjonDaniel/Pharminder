@@ -1,25 +1,5 @@
 package com.example.farmahomie;
 
-/*
- * Asignatura Aplicaciones Moviles - UC3M
- * Update: 13/02/2018.
- *
- * Based in code by Google with Apache License, Version 2.0
- *
- * Copyright (C) 2008 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -45,9 +25,9 @@ public class NotesDbAdapter {
 
     // Sentencia SQL para crear las tablas de las bases de datos
     private static final String DATABASE_CREATE = "create table " + DATABASE_TABLE + " (" +
-        KEY_ROWID +" integer primary key autoincrement, " +
-        KEY_TITLE +" text not null, " +
-        KEY_BODY + " text not null);";
+            KEY_ROWID +" integer primary key autoincrement, " +
+            KEY_TITLE +" text not null, " +
+            KEY_BODY + " text not null);";
 
     private DatabaseHelper mDbHelper;
     private SQLiteDatabase mDb;

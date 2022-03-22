@@ -3,13 +3,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="it.uc3m.com.helloappmov.com.uc3m.com.helloappmov.MainActivity">
+    tools:context=".EditActivity">
 
     <item android:id="@+id/action_delete"
-        android:title="delete"
+        android:title="@string/menu_delete"
         android:orderInCategory="1"
         app:showAsAction="never" />
     <item android:id="@+id/action_about"
-        android:title="menu_about"
+        android:title="@string/menu_about"
         android:orderInCategory="2" app:showAsAction="never" />
 </menu>
