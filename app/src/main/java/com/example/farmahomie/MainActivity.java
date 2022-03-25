@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     @Override
    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_notepad);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -71,10 +72,6 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
     }
 
-    public void createNote() {
-        Intent i = new Intent(this,com.example.farmahomie.EditActivity.class);
-        startActivityForResult(i, ACTIVITY_CREATE);
-    }
 
 
 
